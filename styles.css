@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@import url(//db.onlinewebfonts.com/c/d137ead104e64e23638ece34e253b1ec?family=TecnicaBoldAlternateW01-Rg);
+
+@font-face {font-family: "TecnicaBoldAlternateW01-Rg"; 
+    src: url("//db.onlinewebfonts.com/t/d137ead104e64e23638ece34e253b1ec.eot"); 
+    src: url("//db.onlinewebfonts.com/t/d137ead104e64e23638ece34e253b1ec.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/d137ead104e64e23638ece34e253b1ec.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d137ead104e64e23638ece34e253b1ec.woff") format("woff"), url("//db.onlinewebfonts.com/t/d137ead104e64e23638ece34e253b1ec.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/d137ead104e64e23638ece34e253b1ec.svg#TecnicaBoldAlternateW01-Rg") format("svg"); 
+}
+
+/* --------------- DECLARE VARIABLE ------------------*/
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --white-color : #ffffff;
+    --black-color :#181818;
+    --green-color : #ecfdac;
+    --orange-color : #f9bc7d;
+    --blue-light-color : #a3b7ff;
+    --purple-color : #b897e9;
+    --pink-color :#f38bf5;
+    --overlay-color : #f8f8f8;
+    --black-color-2 : #7a7a7a;
+    --active-color : #6955cc;
+    --edge-color : rgba(0,0,0,0.1);
+
+    --font-size-biggest : 2rem;
+    --font-size-bigger : 1.5rem;
+    --font-size-normal : 1rem;
+    --font-size-small : 0.75rem;
+    --font-size-smallest : 0.5rem;
+}
+
+.title {
+    color : var(--black-color);
+    font-size: var(--font-size-bigger);
+    font-weight: 600;
+}
+
+.desc-level-1 {
+    font-weight: 600;
+    color : var(--black-color);
+    font-size: var(--font-size-normal);
+}
+
+.desc-level-2 {
+    color : var(--black-color-2);
+    font-size: var(--font-size-normal);
+}
+
+
+.desc-level-3 {
+    color: var(--white-color);
+    font-size: var(--font-size-small);
+}
+
+.currency-level-1 {
+    font-family: "TecnicaBoldAlternateW01-Rg";
+    font-size: var(--font-size-bigger);
+    color : var(--black-color);
+    position: relative;
+}
+
+.currency-level-1::after{
+    font-family: "TecnicaBoldAlternateW01-Rg";
+    position:absolute;
+    content: "$";
+    left: -0.5rem;
+    top: 5%;
+    font-size: var(--font-size-normal);
+    font-weight: 600;
+}
+
+.currency-level-2 {
+    font-family: "TecnicaBoldAlternateW01-Rg";
+    font-size: var(--font-size-normal);
+    color : var(--black-color);
+}
+
+.currency-level-3 {
+    font-family: "TecnicaBoldAlternateW01-Rg";
+    font-size: var(--font-size-bigger);
+    color : var(--black-color);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border {
+    border-radius: 20px;
+}
+
+.col-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currency-color {
+    color : var(--white-color);
+}
+/* ------------------------------------ */
+
+/* ---------------------- RESET CSS --------------------*/
+
+*,::before,::after{
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+h1,h2,h3,p,ul{
+    margin: 0;
+  }
+  
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+/* ------------------------------------ */
+
+/* ------------------------- MENU ------------------------*/
+
+.menu {
+    width: 15%;
+    height: 100%;
+    padding : 20px 0 20px 20px;
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.menu::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--edge-color);
+    top: 0;
+    right: 0;
+}
+
+/* LOGO */
+
+.menu-logo {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform: rotate(45deg);
+    overflow: hidden;
+    background-color: var(--white-color);
+}
+
+.logo-edge-1 {
+    position: absolute;
+    background-color: var(--black-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, 25%);
+}
+
+.logo-edge-2 {
+    position: absolute;
+    background-color: var(--black-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(25%, -50%);
+}
+
+.logo-edge-3 {
+    position: absolute;
+    background-color: var(--black-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(110%,25%);
+}
+
+.logo-edge-4 {
+    position: absolute;
+    background-color: var(--black-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(25%,110%);
+}
+
+.logo-link-url {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-name {
+    font-size: var(--font-size-bigger);
+    color: var(--black-color);
+    font-weight: 600;
+}
+
+/* ------------------------------------ */
+
+/* ------------------------LIST FEATURES ---------------------*/
+
+.menu-list {
+    margin-top: 2rem;
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.list-features {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+}
+
+.feature-active {
+    color : var(--active-color);
+    position: relative;
+}
+
+.feature-active::after {
+    position: absolute;
+    content: ">";
+    left: -20px;
+    font-size: var(--font-size-normal);
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+}
+
+.logout-icon {
+    margin-right: 1rem;
+}
+
+/* -------------------- MAIN -------------------------*/
+
+.main {
+    width: 85%;
+    height: 100%;
+    padding: 30px 30px 20px 20px;
+    display: flex;
+}
+
+/* --------------------- MAIN-OVERVIEW ------------------------ */
+
+.main-overview {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.overview-title {
+    height: 10%;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.overview-header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.overview-calender {
+    justify-content: space-around;
+    width: 30%;
+    background-color: var(--edge-color);
+    height: 100%;
+    align-items: center;
+}
+
+.calender-icon {
+    margin : 0 5%;
+}
+
+.select-icon {
+    cursor: pointer;
+}
+
+.overview-summary {
+    width: 100%;
+    height: 20%;
+    background-color: var(--green-color);
+    justify-content: space-around;
+}
+
+.summary-icon {
+    background-color:var(--blue-light-color);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank-icon {
+    font-size: var(--font-size-biggest);
+    color: var(--overlay-color);
+}
+
+.add-exchange {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--edge-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : var(--black-color-2);
+}
+
+.overview-exchange {
+    width: 100%;
+    height: 15%;
+    margin-bottom: 1rem;
+}
+
+.exchange-card {
+    width: 24%;
+    height: 100%;
+    border : 1px solid var(--edge-color);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.exchange-info {
+    width: 100%;
+}
+
+.exchange-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--green-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.money-icon {
+    font-size: 1rem;
+}
+
+.overview-statistics {
+    width: 100%;
+    height: 25%;
+    align-items: unset;
+    justify-content: space-between;
+}
+
+.overview-statistic {
+    height: 40px;
+    justify-content: unset;
+}
+
+.statistic-icon {
+    width: 40px;
+    height: 100%;
+    background-color: violet;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5%;
+}
+
+.statistic-icon-mdf {
+    font-size: 1rem;
+}
+
+.statistic-title {
+    width: 20%;
+    margin-right: 5%;
+}
+
+.statistic-bar {
+    width: 50%;
+    height: 40%;
+    background-color: violet;
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+/* ----------------------------------------------- */
+
+/* ---------------- MAIN USER -------------------- */
+
+.main-user {
+    padding-left: 30px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+.navbar {
+    width: 100%;
+    height: 10%;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box {
+    padding: 0 1rem;
+    width: 60%;
+    height: 50%;
+    background-color: var(--edge-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-icon {
+    align-self: center;
+    font-size: 1rem;
+}
+
+.search-input {
+    width: 90%;
+    background-color: transparent;
+    border-style: none;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.user-info {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notify {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border : 1px solid var(--black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : var(--black-color);
+}
+
+.notify:hover {
+    background-color: var(--black-color-2);
+    color : var(--overlay-color);
+}
+
+
+.user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border : 1px solid var(--edge-color);
+    background-image: url(./avt-boy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-transactions {
+    width: 100%;
+    height: 30%;
+}
+
+.user-transaction {
+    width: 100%;
+    justify-content: unset;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.user-transaction::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: var(--edge-color);
+    bottom: -25%;
+}
+
+.transaction-name {
+    width: 40%;
+    margin-right: 5%;
+}
+
+.transaction-time {
+    width: 40%;
+    margin-right: 5%;
+}
+
+.user-schedules {
+    width: 100%;
+    height: 15%;
+}
+
+.user-schedule {
+    width: 30%;
+    height: 100%;
+    border: 1px solid var(--edge-color);
+    background-color: var(--purple-color);
+    justify-content: space-around;
+}
+
+.schedule-time {
+    width: 55%;
+}
+
+.user-upgrade {
+    margin-top: 2rem;
+    width: 100%;
+    height: 20%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.upgrade-icon {
+    font-size: var(--font-size-biggest);
+    color: var(--black-color);
+}
